@@ -186,10 +186,10 @@
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
       <div class="pill-group">
-        @for (item of [ { title: 'Home', link: '/' }, { title: 'Component',
-        link: '/component' }, { title: 'Navigation', link: '/nav' }, { title:
-        'Dependency Injection', link: '/di' }, { title: 'HTTP', link: '/http' },
-        ]; track item.title) {
+        @for (item of [ { title: 'Home', link: '/' }, { title: 'Form', link:
+        '/form' }, { title: 'Component', link: '/component' }, { title:
+        'Navigation', link: '/nav' }, { title: 'Dependency Injection', link:
+        '/di' }, { title: 'HTTP', link: '/http' }, ]; track item.title) {
         <a class="pill" [href]="item.link" rel="noopener">
           <span>{{ item.title }}</span>
           <svg

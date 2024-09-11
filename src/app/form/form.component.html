@@ -1,0 +1,34 @@
+<form #soldev="ngForm">
+  view binding = {{ soldev.value | json }}
+  <hr />
+  <div>
+    <label for="nik">NIK</label>
+    <input type="text" [(ngModel)]="soldevModel.nik" name="nik" />
+  </div>
+  <div>
+    <label for="name">Name</label>
+    <input type="text" [(ngModel)]="soldevModel.name" name="name" />
+  </div>
+  <div *ngFor="let item of gender">
+    <label for="gender">{{ item }}</label>
+    <input
+      type="radio"
+      [(ngModel)]="soldevModel.gender"
+      name="gender"
+      value="{{ item }}"
+    />
+  </div>
+  <div>
+    <label for="departement">Departement</label>
+    <select [(ngModel)]="soldevModel.departement" name="departement">
+      @for (item of departements; track $index) {
+      <option>{{ item }}</option>
+      }
+    </select>
+  </div>
+  <div>
+    <input type="submit" value="Submit" (click)="onSubmit()" />
+  </div>
+  <hr />
+  class binding = {{ soldevModel | json }}
+</form>
